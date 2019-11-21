@@ -1,0 +1,8 @@
+600, 100, 90.0, 10.0     # nx, ny, xlength, ylength
+1, 1                     # dims(1), dims(2)
+0.01, 1000, 400, 0        # dt, tend, nout, irestrt
+0, 1                     # ixbc, iybc
+1, 0.0, 0.0              # gamma, cf, cb
+0.1, 2.5, 2.0, 0.001     # alpha, xc, wc, ramp1
+run001.dat
+run001.dat

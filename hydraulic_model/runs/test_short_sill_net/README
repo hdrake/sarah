@@ -1,0 +1,9 @@
+Instructions for running the hydraulic model:
+
+source ~/.bashrc 
+gfortran -cpp -DSERIAL -ffpe-trap=zero,overflow,underflow -O3 Gra_1lay_mpi.f90 -o Gra_1lay_ser.x
+
+Post-processing:
+
+matlab plt_1lay_mpi.m
+> run001

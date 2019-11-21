@@ -1,0 +1,18 @@
+# To compile on Mac OSX version 10.14.6 
+gfortran -cpp -DSERIAL -ffpe-trap=zero,overflow,underflow -O3 Gra_1lay_mpi.f90 -o Gra_1lay_ser.x
+
+# To execute a run with input file run###.ic
+./Gra_1lay_ser.x run###
+
+# Structure of input file run###.ic
+nx, ny, xlength, ylength
+dims(1), dims(2)
+dt, tend, nout, irestrt
+ixbc, iybc
+gamma, cf, cb
+alpha, xc, wc, ramp1 
+
+# Variables
+q(:,:,1) ===> interface thickness d(x,y)
+q(:,:,2) ===> transport v(x,y) * d(x,y)
+q(:,:,3) ===> ?????
