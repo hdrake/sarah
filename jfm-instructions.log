@@ -1,0 +1,377 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.19)  20 APR 2018 10:17
+entering extended mode
+**./jfm-instructions.tex
+(jfm-instructions.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+(jfm.cls
+Document Class: jfm 2006/11/13 v1.27 Journal of Fluid Mechanics document class
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graph
+icx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyva
+l.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graph
+ics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.
+sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\g
+raphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\p
+dftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etool
+box.sty"
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count79
+)
+LaTeX Info: Redefining \textsfbi on input line 184.
+LaTeX Font Info:    Redeclaring math alphabet \mathsfbi on input line 184.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfbi' in version `normal'
+(Font)                  OT1/cmss/m/sl --> T1/phv/b/it on input line 184.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfbi' in version `bold'
+(Font)                  OT1/cmss/m/sl --> T1/phv/b/it on input line 184.
+LaTeX Info: Redefining \textsfbi on input line 188.
+LaTeX Font Info:    Redeclaring math alphabet \mathsfbi on input line 188.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfbi' in version `normal'
+(Font)                  T1/phv/b/it --> OT1/phv/b/it on input line 188.
+LaTeX Font Info:    Overwriting math alphabet `\mathsfbi' in version `bold'
+(Font)                  T1/phv/b/it --> OT1/phv/b/it on input line 188.
+\halflineskip=\skip41
+\affilskip=\skip42
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\@indentskip=\skip43
+\smallindent=\skip44
+\@footindent=\skip45
+\@leftskip=\skip46
+\proofbox=\box26
+\rpbdim=\skip47
+\@stequation=\toks15
+\c@subequation=\count85
+\c@table=\count86
+\c@figure=\count87
+LaTeX Info: Redefining \cite on input line 1157.
+\astrutbox=\box27
+
+
+Found the 'amsbsy' package on the system, using it.
+
+(amsbsy.sty
+Package: amsbsy 1995/01/20 v1.2
+ (amsgen.sty
+File: amsgen.sty 1995/02/01 v1.2a
+\@emptytoks=\toks16
+\ex@=\dimen104
+)
+\pmbraise@=\dimen105
+)
+
+
+Found AMS Euler Roman fonts on the system, using the 'upmath' package.
+
+(upmath.sty
+Package: upmath 1996/10/20 v1.0 CUP LaTeX2e package
+\c@mv@upright=\count88
+\c@mv@boldupright=\count89
+LaTeX Font Info:    Overwriting symbol font `letters' in version `upright'
+(Font)                  OML/cmm/m/it --> OML/eur/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `boldupright'
+(Font)                  OML/cmm/m/it --> OML/eur/b/n on input line 66.
+)
+
+
+Found AMS Symbol fonts on the system, using the 'amssymb' package.
+
+(amssymb.sty
+Package: amssymb 1995/02/01 v2.2a
+ (amsfonts.sty
+Package: amsfonts 1995/02/01 v2.2b
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 128.
+)))
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epsto
+pdf.sty"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epsto
+pdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\inf
+warerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfex
+t.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvd
+efinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltx
+cmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopt
+ions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvs
+etkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ete
+xcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifl
+uatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdf
+texcmds.sty"
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifp
+df.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+))
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\epsfi
+g.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen106
+\epsfysize=\dimen107
+)
+\c@lemma=\count90
+\c@corollary=\count91
+ (natbib.sty
+Package: natbib 2000/07/24 7.0a (PWD)
+\bibhang=\skip48
+\bibsep=\skip49
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count92
+) (jfm-instructions.aux)
+\openout1 = `jfm-instructions.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pd
+f.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count93
+\scratchdimen=\dimen108
+\scratchbox=\box28
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen109
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks18
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.
+fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.
+fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[1{C:/Users/cmarshall/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+Non-PDF special ignored!
+<special> papersize=174mm,247mm
+] [2]
+Package epstopdf Info: Source file: <trapped.eps>
+(epstopdf)                    date: 2015-08-25 11:19:08
+(epstopdf)                    size: 255776 bytes
+(epstopdf)             Output file: <trapped-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 11:19:08
+(epstopdf)                    size: 8991 bytes
+(epstopdf)             Command: <epstopdf --outfile=trapped-eps-converted-to.pd
+f trapped.eps>
+(epstopdf)             \includegraphics on input line 74.
+Package epstopdf Info: Output file is already uptodate.
+<trapped-eps-converted-to.pdf, id=21, 352.31625pt x 225.84375pt>
+File: trapped-eps-converted-to.pdf Graphic file (type pdf)
+<use trapped-eps-converted-to.pdf>
+Package pdftex.def Info: trapped-eps-converted-to.pdf  used on input line 74.
+(pdftex.def)             Requested size: 352.31538pt x 225.84319pt.
+Package epstopdf Info: Source file: <modes.eps>
+(epstopdf)                    date: 2015-08-25 11:19:08
+(epstopdf)                    size: 369722 bytes
+(epstopdf)             Output file: <modes-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 11:19:08
+(epstopdf)                    size: 17561 bytes
+(epstopdf)             Command: <epstopdf --outfile=modes-eps-converted-to.pdf 
+modes.eps>
+(epstopdf)             \includegraphics on input line 83.
+Package epstopdf Info: Output file is already uptodate.
+<modes-eps-converted-to.pdf, id=22, 325.215pt x 142.5325pt>
+File: modes-eps-converted-to.pdf Graphic file (type pdf)
+<use modes-eps-converted-to.pdf>
+Package pdftex.def Info: modes-eps-converted-to.pdf  used on input line 83.
+(pdftex.def)             Requested size: 325.2142pt x 142.53214pt.
+ [3] [4 <./trapped-eps-converted-to.pdf> <./modes-eps-converted-to.pdf>]
+[5]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 155.
+
+
+("C:\Users\cmarshall\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.
+fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 155.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <7> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 155.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <5> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 155.
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--158
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 166--180
+
+ []
+
+[7] [8] [9] (jfm-instructions.bbl [10]) [11] (jfm-instructions.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 3)
+
+### simple group (level 3) entered at line 166 ({)
+### simple group (level 2) entered at line 166 ({)
+### simple group (level 1) entered at line 145 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2919 strings out of 493305
+ 38667 string characters out of 3128062
+ 104293 words of memory out of 3000000
+ 6393 multiletter control sequences out of 15000+200000
+ 22791 words of font info for 77 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,11n,26p,2481b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
+/dvips/base/8r.enc}<C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/cmarshall/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/cmarshall/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
+s/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+bx8.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/cmarshall/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/cmarshal
+l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/cmarshall/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/cmars
+hall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.p
+fb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr5.pfb><C:/Users/cmarshall/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/cmarshall/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/cmars
+hall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+<C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/cmarshall/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/cmar
+shall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
+fb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti8.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti9.pfb><C:/Users/cmarshall/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/cmarshall/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmu10.pfb><C:/Users/c
+marshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eu
+rm10.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/euler/eurm7.pfb><C:/Users/cmarshall/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/cmarshall/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb>
+Output written on jfm-instructions.pdf (11 pages, 423538 bytes).
+PDF statistics:
+ 185 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
