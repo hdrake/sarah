@@ -1,6 +1,0 @@
-#!/bin/bash
-rm run002.dat
-source ~/.bashrc
-gfortran -cpp -DSERIAL -ffpe-trap=zero,overflow,underflow -O3 Gra_1lay_mpi.f90 -o Gra_1lay_ser.x
-./Gra_1lay_ser.x run002
-
