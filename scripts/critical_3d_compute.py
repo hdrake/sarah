@@ -99,7 +99,7 @@ for kk in range(1,nalpha):
                 else:
                     xpr[i-1]=xpr[i]-dx*((s[i]/d[i])*xpr[i]+1/d[i]*(d[i]/v[i]**2-1)*zpr[i])
                     zpr[i-1]=zpr[i]-dx*(s[i]*v[i]/d[i]*xpr[i]-v[i]/d[i]*zpr[i])
-
+                    
             match[ii,jj,kk] = zpl[np.int(nx/2)]/zpr[np.int(nx/2)]
             Q[ii,jj,kk] = np.nansum(v*d*dx)
 
