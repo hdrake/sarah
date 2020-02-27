@@ -4,6 +4,7 @@ movies/figures
 
 stderr
 stdout
+output_*
 output.*
 submit_*
 
