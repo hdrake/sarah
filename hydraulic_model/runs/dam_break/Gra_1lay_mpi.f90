@@ -51,8 +51,7 @@
  real(fpp)       :: dt,t0,tend
  real(fpp)       :: gamma,cf,cb
  real(fpp)       :: u0, xb0, yb0, ay1, ax1, slpy
- real(fpp)       :: alpha, xc, sill, ramp1
- real(fpp)       :: initalpha, initbeta, initgamma
+ real(fpp)       :: kappa, xc, sill, ramp1
  character*80    :: runname, outfile, restart
 
  contains
@@ -69,8 +68,7 @@
       read(10,*)  dt, tend, nout, irestrt
       read(10,*)  ixbc, iybc
       read(10,*)  gamma, cf, cb
-      read(10,*)  alpha, xc, sill, ramp1
-      read(10,*)  initalpha, initbeta, initgamma ! pchan stab
+      read(10,*)  kappa, xc, sill, ramp1
       read(10,'(a)') outfile
       read(10,'(a)') restart
     close(10)
@@ -482,7 +480,7 @@ end program Gra_1lay_mpi
 
 !           # set topography
             b(i,j) = sill*(dexp(-((x(i)-half*xlength)*lambda)**2)) &
-                      + alpha*y(j)**2
+                      + half*kappa*y(j)**2
           enddo
         enddo
 
@@ -495,7 +493,7 @@ end program Gra_1lay_mpi
             hp = ramp1*dsqrt(-two*dlog(rn(1)))*dcos(twopi*rn(2))
 
             q(i,j,1) = (BBB - b(i,j)) &
-                        * (atan(-two*lambda*(x(i) - half*xlength)) + half*pi)/pi &
+                        * (atan(-four*lambda*(x(i) - half*xlength)) + half*pi)/pi &
                         + hp
             q(i,j,2) = zero
             

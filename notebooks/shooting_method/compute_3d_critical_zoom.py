@@ -3,7 +3,7 @@
 
 # ### Shooting method implementation for evaluating whether sections are hydraulically controlled
 
-# In[3]:
+# In[ ]:
 
 
 import numpy as np
@@ -14,10 +14,9 @@ from utilities import *
 
 save_perturbations = False
 
-
 # #### External parameters and functions
 
-# In[4]:
+# In[ ]:
 
 
 def f(ϕ): return 2. * (2*np.pi)/(60.**2 * 24.) * np.sin(np.deg2rad(ϕ))
@@ -32,21 +31,20 @@ f0 = f(ϕ)
 αsill = 5.8e-6 # from Borenas and Lundberg (1988)
 r = f0**2 / (gp*αsill)
 
-
 # #### Define range for parameter sweep
 
-# In[4]:
+# In[ ]:
 
 
 nα = 250
 nβ = 250
 nγ = 250
 
-αlim = [-2.75, -1.2]
+αlim = [-1.9, -1.4]
 dα = np.diff(αlim)/nα
 αvec = np.arange(αlim[0],αlim[1],dα)
 
-βlim = [0., 2.1]
+βlim = [0., 0.5]
 dβ = np.diff(βlim)/nβ
 βvec = np.arange(βlim[0],βlim[1],dβ)
 
@@ -68,10 +66,9 @@ if save_perturbations:
     xp = np.zeros((nα, nβ, nγ, nx))
     zp = np.zeros((nα, nβ, nγ, nx))
 
-
 # #### Run shooting method across parameters
 
-# In[5]:
+# In[ ]:
 
 
 for kk, γ in enumerate(γvec):
@@ -95,9 +92,6 @@ for kk, γ in enumerate(γvec):
                     xarr[ii,jj,kk,:] = outputs['x']
 
 
-# In[6]:
-
-
 ds = xr.Dataset()
 ds['α'] = xr.DataArray(αvec, coords=[αvec], dims=['α'])
 ds['β'] = xr.DataArray(βvec, coords=[βvec], dims=['β'])
@@ -112,11 +106,5 @@ if save_perturbations:
     ds['xp'] = xr.DataArray(xp, coords=[αvec, βvec, γvec, x_idx], dims=['α', 'β', 'γ', 'x_idx'], name='xp')
     ds['zp'] = xr.DataArray(zp, coords=[αvec, βvec, γvec, x_idx], dims=['α', 'β', 'γ', 'x_idx'], name='zp')
 
-ds.to_netcdf('../../data/critical_3d.nc')
-
-
-# In[ ]:
-
-
-
+ds.to_netcdf('../../data/critical_3d_zoom.nc')
 

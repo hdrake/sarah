@@ -1,0 +1,8 @@
+2000, 100, 100.0, 5.0      # nx, ny, xlength, ylength
+1, 1                     # dims(1), dims(2)
+0.001, 200, 500, 0      # dt, tend, nout, irestrt
+2, 1                     # ixbc, iybc
+1, 0.02, 0.0             # gamma, cf, cb
+3.021, 0.0, 0.8, 0.01   # kappa, xc, sill, ramp1
+run_short.dat
+run_short.dat
