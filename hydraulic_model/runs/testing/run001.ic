@@ -1,8 +1,9 @@
 200, 40, 400.0, 6.0      # nx, ny, xlength, ylength
 1, 1                     # dims(1), dims(2)
-0.001, 10000, 1000, 0      # dt, tend, nout, irestrt
+0.002, 10000, 1000, 0      # dt, tend, nout, irestrt
 2, 1                     # ixbc, iybc
 1, 0.0, 0.0              # gamma, cf, cb
 1.51, 0.0, 0.8, 0.01   # alpha, xc, sill, ramp1
+-2.166, 0.6, 0.4         # initalpha, initbeta, initgamma
 run001.dat
 run001.dat

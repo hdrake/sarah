@@ -4,12 +4,9 @@ movies/figures
 
 stderr
 stdout
-<<<<<<< HEAD
-=======
 output_*
->>>>>>> e1e0f6982ed2bd1ac44bf26528a286d287af2d51
-output.*
 submit_*
 
 __pycache__/
 .ipynb_checkpoints
+.DS_Store

@@ -51,7 +51,8 @@
  real(fpp)       :: dt,t0,tend
  real(fpp)       :: gamma,cf,cb
  real(fpp)       :: u0, xb0, yb0, ay1, ax1, slpy
- real(fpp)       :: kappa, xc, sill, ramp1
+ real(fpp)       :: alpha, xc, sill, ramp1
+ real(fpp)       :: initalpha, initbeta, initgamma
  character*80    :: runname, outfile, restart
 
  contains
@@ -68,7 +69,8 @@
       read(10,*)  dt, tend, nout, irestrt
       read(10,*)  ixbc, iybc
       read(10,*)  gamma, cf, cb
-      read(10,*)  kappa, xc, sill, ramp1
+      read(10,*)  alpha, xc, sill, ramp1
+      read(10,*)  initalpha, initbeta, initgamma ! pchan stab
       read(10,'(a)') outfile
       read(10,'(a)') restart
     close(10)
@@ -463,10 +465,10 @@ end program Gra_1lay_mpi
                     yc_flow(sx-mbc:ex+mbc,sy-mbc:ey+mbc)
 
        lambda = 0.1_fpp
-       aa = (one + kappa)/(eight)
+       aa = (one + two*alpha)/(eight)
        BBB = two
        QQQ = 0.538_fpp
-       ee = (72.0_fpp*QQQ**2)/(kappa*(one+kappa))
+       ee = (72.0_fpp*QQQ**2)/(two*alpha*(one+two*alpha))
        del0 = 12.0_fpp*aa*ee
 
        y(:) = y(:) - half*ylength
@@ -497,7 +499,7 @@ end program Gra_1lay_mpi
 
 !           # set topography
             b(i,j) = sill*(dexp(-((x(i)-half*xlength)*lambda)**2)) &
-                      + half*kappa*y(j)**2
+                      + alpha*y(j)**2
 
 !           # calculate critical parameters
             bb(i,j) = sill*(dexp(-((x(i)-half*xlength)*lambda)**2)) - BBB
@@ -526,7 +528,7 @@ end program Gra_1lay_mpi
               ww(i,j) = w4(i,j)
             endif
             
-            yc_flow(i,j) = -12.0*QQQ/(kappa*(one+kappa)*ww(i,j)**3)
+            yc_flow(i,j) = -12.0*QQQ/(two*alpha*(one+two*alpha)*ww(i,j)**3)
 
           enddo
         enddo
@@ -539,9 +541,9 @@ end program Gra_1lay_mpi
             CALL RANDOM_NUMBER(HARVEST = rn)
             hp = ramp1*dsqrt(-two*dlog(rn(1)))*dcos(twopi*rn(2))
 
-            q(i,j,1) = half*(one+kappa) * ((half*ww(i,j))**2 &
+            q(i,j,1) = half*(one+two*alpha) * ((half*ww(i,j))**2 &
                          - (y(j) - yc_flow(i,j))**2) + hp
-            q(i,j,2) = - (kappa*yc_flow(i,j) - (y(j) - yc_flow(i,j))) &
+            q(i,j,2) = - (two*alpha*yc_flow(i,j) - (y(j) - yc_flow(i,j))) &
                        * q(i,j,1)
             if ( q(i,j,1) .lt. eps ) then
               q(i,j,1) = eps
