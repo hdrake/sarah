@@ -4,8 +4,9 @@ movies/figures
 
 stderr
 stdout
-output*
+output_*
 submit_*
 
 __pycache__/
 .ipynb_checkpoints
+.DS_Store

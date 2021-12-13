@@ -7,4 +7,4 @@ dependencies:
   - matplotlib
   - xarray
   - dask
-  - netCDF4
+  - netcdf4
