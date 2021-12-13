@@ -84,7 +84,7 @@ def shoot_perturbations(α, β, γ, r, nx):
     psi[d<0.]=0.
     
     outputs = {
-        'match': (zpL[nx//2]-zpR[nx//2])/((zpL[nx//2]+zpR[nx//2])/2.),
+        'match': np.abs(zpL[nx//2]-zpR[nx//2])/np.sqrt(zpL[nx//2]**2 + zpR[nx//2]**2),
         'Q': np.nansum(psi*dx),
         'xp': xp_tmp,
         'zp': zp_tmp,
