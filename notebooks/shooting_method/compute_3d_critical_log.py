@@ -5,12 +5,13 @@
 
 # In[3]:
 
+import sys
+sys.path.append("../")
+from shooting import *
 
 import numpy as np
 import matplotlib.pyplot as plt
 import xarray as xr
-
-from utilities import *
 
 save_perturbations = False
 

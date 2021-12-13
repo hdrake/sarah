@@ -7,12 +7,12 @@
 
 import sys
 sys.path.append("../")
+from shooting import *
 
 import numpy as np
 import matplotlib.pyplot as plt
 import xarray as xr
 
-from shooting import *
 
 save_perturbations = False
 
@@ -40,9 +40,9 @@ r = f0**2 / (gp*αsill)
 # In[4]:
 
 
-nα = 250
-nβ = 250
-nγ = 250
+nα = 400
+nβ = 400
+nγ = 400
 
 αlim = [-2.75, -1.2]
 dα = np.diff(αlim)/nα
