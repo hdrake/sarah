@@ -80,7 +80,7 @@ where $\delta = L_{D}/L$ and we scale the dissipation $\mathbf{F} = \frac{L \mat
 \end{equation}
 Notably, the (weaker) along-channel pressure gradient $\dv{(d + h)}{y}$ in (\ref{eq.non-dim-y-mom}) still accelerates the along-channel flow (on length scales longer than the width scale) and permits hydraulic behavior similar to the classical non-rotating case.
 \subsection{Idealized zero-PV solutions for parabolic channels}
-In the case of a parabolic channel cross-section $h(x,y)=h(0,y) + x^{2}/r(y)$, \cite{Borenas1986} and \cite{borenas_deep-water_1988} derive an analytical solution for the critical condition in cases of constant or zero upstream potential vorticity. We begin by re-deriving their zero-potential vorticity solution (following the notation conventions of \citealt{Pratt2007}, Ch. 2.8) as a special case of quadratic cross-channel layer thickness and later use numerical methods to generalize these conditions to non-zero PV.
+In the case of a parabolic channel cross-section $h(x,y)=h(0,y) + \alpha_{s}\, x^{2}$, \cite{Borenas1986} and \cite{borenas_deep-water_1988} derive an analytical solution for the critical condition in cases of constant or zero upstream potential vorticity. We begin by re-deriving their zero-potential vorticity solution (following the notation conventions of \citealt{Pratt2007}, Ch. 2.8) as a special case of quadratic cross-channel layer thickness and later use numerical methods to generalize these conditions to non-zero PV.
 
 Consider a quadratic thickness profile across the channel,
 \begin{equation}\label{eq.thickness}
@@ -88,22 +88,22 @@ d(x) = \alpha x^{2} + \beta x + \gamma,
 \end{equation}
 with a corresponding semi-geostrophic velocity profile
 \begin{equation}\label{eq.velocity}
-v(x) = \dv{(d+h)}{x} = \left(2 \alpha + \frac{2}{r} \right) x + \beta.
+v(x) = \dv{(d+h)}{x} = 2\left( \alpha + \alpha_{s} \right) x + \beta.
 \end{equation}
 
 The semi-geostrophic potential vorticity 
 \begin{equation}
-q = \frac{1+\frac{\partial v}{\partial x}}{d} = \frac{1+2\alpha + \frac{2}{r}}{\alpha x^{2} + \beta x + \gamma}
+q = \frac{1+\frac{\partial v}{\partial x}}{d} = \frac{1+2(\alpha + \alpha_{s})}{\alpha x^{2} + \beta x + \gamma}
 \end{equation}
-vanishes when 
+vanishes, $q=0$, when 
 \begin{align}
-\alpha &= -\frac{1}{2}(1+2r^{-1}).
+\alpha &= - \left(\alpha_{s} + \frac{1}{2} \right) \equiv \alpha_{\text{ZPV}}.
 \end{align}
 
 We define $x_{L}$ and $x_{R}$ to be the left and right points at which the layer depth vanishes, respectively. Expressing the layer thickness in terms of its roots, $d(x) = \alpha (x-x_{L})(x-x_{R})$, we identify the quadratic coefficients
 \begin{align}
-\beta &= \frac{1}{2}(1+2r^{-1})(x_{R}+x_{L}), \\
-\gamma &= -\frac{1}{2}(1+2r^{-1})x_{R}x_{L}.
+\beta &= -\alpha(x_{R}+x_{L}), \\
+\gamma &= \alpha\, x_{R}x_{L}.
 \end{align}
 
 \subsection{The hydraulic control condition with zero PV}
@@ -118,24 +118,25 @@ B = \frac{v^{2}}{2} + (d + h)
 \end{equation}
 are conserved in the inviscid limit. Combining (\ref{eq.transport}) and (\ref{eq.bernoulli}) with (\ref{eq.thickness}) and (\ref{eq.velocity}), we have
 \begin{equation}
-    Q = \mathcal{G}(x_{R}-x_{L}) = \frac{(x_{R} - x_{L})^{3} (2+r)}{6r^{2}} \left[ \Delta z\frac{  r^{2}}{2+r} - \frac{r(x_{R} - x_{L})^{2}}{8} \right]^{1/2}
+    Q = \mathcal{G}(w) = \frac{w^{3} (2+\alpha_{s}^{-1})}{6\alpha_{s}^{-2}} \left[ (B - h(0, y)) \frac{  \alpha_{s}^{-2}}{2+\alpha_{s}^{-1}} - \frac{w^{2}}{8\alpha_{s}} \right]^{1/2}\label{eq:quartic-width},
 \end{equation}
-This expression for the along-channel transport takes the form of a hydraulic functional in the dependent variable $w \equiv (x_{R} - x_{L})$, the layer width, which depends on the along-channel position $y$ only implicitly \citep{gill_hydraulics_1977}. The partial derivative $\partial \mathcal{G}/\partial w = 0$ vanishes only at the critical section that permits stationary perturbations (equivalently, where the Froude number reaches unity). The assumption of stationarity yields a set of hydraulically-controlled solutions that satisfy the constraint
+where $w \equiv (x_{R} - x_{L})$ is the layer width. For a constant $Q>0$, (\ref{eq:quartic-width}) can be written as a quartic equation in $w^{2}$; its two physical roots yield subcritical and supercritical branches, respectively. Figure \ref{} shows one such solution.
+
+The expression (\ref{eq:quartic-width}) for the along-channel transport takes the form of a hydraulic functional in the dependent variable $w$ which depends on the along-channel position $y$ only implicitly \citep{gill_hydraulics_1977}. The partial derivative $\partial \mathcal{G}/\partial w = 0$ vanishes only at the critical section that permits stationary perturbations (equivalently, where the Froude number reaches unity). The assumption of stationarity yields a set of hydraulically-controlled solutions that satisfy the constraint
 \begin{equation}\label{eq.hydraulic_constraint}
 x_{R}-x_{L} = \sqrt{\frac{6}{r}}\left( x_{R} + x_{L} \right).
 \end{equation}
-Plugging this constraint (\ref{eq.hydraulic_constraint}) on the interface geometry into the expressions for the cross-channel thickness parameters $\beta$ and $\gamma$, we find
-\begin{align}\label{eq.beta}
-\beta &= \frac{1}{2}(1+2r^{-1})\left(1+\left[ \frac{1+\sqrt{\frac{6}{r}}}{1-\sqrt{\frac{6}{r}}} \right] \right)x_{L}\\
-\gamma &= -\frac{1}{2}(1+2r^{-1}) \left[ \frac{1+\sqrt{\frac{6}{r}}}{1-\sqrt{\frac{6}{r}}} \right] x_{L}^{2},
-\end{align}
-which combined yield the relationship
+Plugging this constraint (\ref{eq.hydraulic_constraint}) on the interface geometry into the expressions for the cross-channel thickness parameters $\beta$ and $\gamma$ yields the relationship
 \begin{equation}\label{eq.gamma}
-\gamma = \beta^{2} \left(-\frac{2}{1+2r^{-1}} \left[ \frac{1+\sqrt{\frac{6}{r}}}{1-\sqrt{\frac{6}{r}}} \right] \left[ 1+ \frac{1+\sqrt{\frac{6}{r}}}{1-\sqrt{\frac{6}{r}}} \right]^{-2} \right)
+\gamma = K \beta^{2},\quad\text{where}\; K = \alpha_{s}^{-1} c\,(1 + c)^{-2} \;\text{ with }\;c = \frac{1+\sqrt{6\alpha_{s}}}{1-\sqrt{6\alpha_{s}}}
 \end{equation}
-Thus, for the zero PV case with $\alpha = -\frac{1}{2}(1+2r^{-1})$ the flow is critical only if $\gamma$ and $\beta$ satisfy (\ref{eq.gamma}). Examples of ZPV critical, supercritical, and subcritical quadratic-thickness sections are shown in Figure \ref{}a for various combinations of $\beta$ and $\gamma$.
+Thus, for ZPV flows characterized by $\alpha = \alpha_{\text{ZPV}}$, the flow is critical only if $\gamma$ and $\beta$ satisfy (\ref{eq.gamma}). Examples of ZPV critical, supercritical, and subcritical quadratic-thickness sections with identical transports $Q$ are shown in Figure \ref{fig:zpv-regimes}.
 
-
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/}
+% \caption{ZPV regime diagram.}\label{fig:zpv-regimes}
+% \end{figure}
 
 \section{Stationary perturbation hydraulic control theory}
 
@@ -203,7 +204,7 @@ Figure \ref{shooting_method}a,b,c shows an application of the shooting method fo
 
 \section{Application of theory to nonlinear flow solutions}
 
-\subsection{Identifying the critical section from hydrographic sections}
+\subsection{Identifying the critical section from (simulated) hydrographic sections}
 
 \subsection{A generalized weir formula for estimating transport from moorings}
 
