@@ -13,7 +13,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import xarray as xr
 
-
 save_perturbations = False
 
 
@@ -48,13 +47,8 @@ nγ = 400
 dα = np.diff(αlim)/nα
 αvec = np.arange(αlim[0],αlim[1],dα)
 
-βlim = [0., 2.1]
-dβ = np.diff(βlim)/nβ
-βvec = np.arange(βlim[0],βlim[1],dβ)
-
-γlim = [0., 2.2]
-dγ = np.diff(γlim)/nγ
-γvec = np.arange(γlim[0],γlim[1],dγ)
+βvec = np.logspace(-0.75, np.log10(3), num=nβ)
+γvec = np.logspace(-1.5, np.log10(3**2), num=nγ)
 
 nx = 200
 x_idx = np.arange(0, nx, 1)
@@ -114,7 +108,7 @@ if save_perturbations:
     ds['xp'] = xr.DataArray(xp, coords=[αvec, βvec, γvec, x_idx], dims=['α', 'β', 'γ', 'x_idx'], name='xp')
     ds['zp'] = xr.DataArray(zp, coords=[αvec, βvec, γvec, x_idx], dims=['α', 'β', 'γ', 'x_idx'], name='zp')
 
-ds.to_netcdf('../../data/critical_3d.nc')
+ds.to_netcdf('../../data/critical_3d_log.nc')
 
 
 # In[ ]:
