@@ -10,6 +10,7 @@
 \documentclass{jfm}
 \usepackage{graphicx}
 \usepackage{epstopdf, epsfig}
+\usepackage{physics}
 
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
@@ -40,35 +41,182 @@ Abstract coming soon.
 
 \section{Introduction}
 
-The deep ocean is largely fed by a handful of localized overflows. At these overflow locations, newly formed dense waters in shallow seas flow through a narrow channel and spill over a sill into a deep ocean basin, mixing with- and entraining- lighter waters along their way. Similarly, the inter-basin exchanges between vast ocean basins often occur in narrow abyssal channels. The disproportionately large impact of these small-scale channels on ocean circulation and watermass properties make them ideal targets for in-situ measurement, theory, and parameterization.
+The global deep ocean is primarily fed by a handful of localized high-latitude overflows, where cold and salty dense waters form in shallow seas. Gravity pushes these dense waters through narrow channels, accelerating as they spill over constraining sills. These overflow waters fill the global abyssal ocean, mixing with---and entraining---lighter waters along their path. The inter-basin exchange of these watermasses is often also controlled by narrow channel flows, where dramatically enhanced mixing is also thought to seal their fate \citep{bryden_effects_2003}. The disproportionately large impact of a handful of these small-scale channels on ocean circulation and watermass properties make them ideal targets for in-situ measurement, theory, and parameterization.
 
-Many of these overflows are thought to be hydraulically controlled, ...
+Many of these channel flows are thought to be hydraulically controlled, meaning that a topographic flow constriction causes a transition from subcritical flow (deep and slow, such that waves are able to travel in both directions) to supercritical flow (shallow and fast, such that all waves are advected downstream). \cite{Whitehead1974} generalizes the classic theory of hydraulic control---as in rivers and dams---to flows affected by rotation and density stratification---as in oceanic channel flows. The theory yields analytical solutions for simple configurations, such as two-layer flows in rectangular channels, the results of which have been verified by laboratory experiments and numerical calculations.
 
-\section{Background: maximal transport hydraulic control theory}
+While hydraulic theory offers a constraint that may be useful for both diagnosing and interpreting oceanographic measurements, existing theories dramatically restrict the manifolds of valid solutions to those with simple geometries and / or simple potential vorticity distributions \citep{pratt_hydraulic_1987, Borenas1986, borenas_deep-water_1988}.
 
-\cite{Borenas1986} and \cite{borenas_deep-water_1988} analytical solution.
+Potential vorticity waves
+
+\section{Background: classical hydraulic control theory}
+
+\subsection{$1+\frac{1}{2}$-layer shallow water equations}
+
+The $1+\frac{1}{2}$-layer shallow water equations are given by \citep{Pratt2007}:
+\begin{gather}
+    \pdv{u^*}{t^*} + u^* \pdv{u^*}{x^*} + v^* \pdv{u^*}{y^*} - f v^* = - g' \pdv{d^*}{x^*} - g' \pdv{h^*}{x^*} + F^{(x)^*}\label{eq.x-mom} \\
+    \pdv{v^*}{t^*} + u^* \pdv{v^*}{x^*} + v^* \pdv{v^*}{y^*} + f u^* = - g'\pdv{d^*}{y^*} - g'\pdv{h^*}{y^*} + F^{(y)^*}\label{eq.y-mom}  \\
+    \pdv{d^*}{t^*} + \pdv{(u^* d^*)}{x^*} + \pdv{(v^* d^*)}{y^*} = 0,\label{eq.mass} 
+\end{gather}
+where $g'=g\frac{\rho_{1} - \rho_{0}}{\rho_{1}}$ is the effective reduced gravity between an upper quiescent layer of density $\rho_{0}$ and a lower active layer of density $\rho_{1}>\rho_{0}$; where $u$ and $v$ are the cross-channel and along-channel depth-averaged velocities, respectively, of the active layer; $d$ is the thickness of the active layer; and $\mathbf{F} = (F^{(x)^*}, F^{(y)^*})$ is a yet-unspecified dissipation. The $*$ superscript denotes dimensional variables, which we contrast with the non-dimensional treatment that follows.
+
+\subsection{Non-dimensionalization and semi-geostrophy}
+
+Consider a typical layer thickness $D$ and a typical horizontal distance scale $L$ of along-channel variations. Motivated by non-rotating hydraulic theory, we non-dimensionalize the along-channel velocity $v^*$ by the interfacial gravity wave speed $V = \sqrt{g'D}$. The along-channel length and velocity scales provide the natural timescale $T = L/\sqrt{g'D}$. The Rossby deformation radius $L_{D} = \frac{2\pi}{f} \sqrt{g'D}$ emerges as a natural scale for boundary-trapped Kelvin waves and provides a natural cross-channel width scale for rotating and stratified channel flow. Finally, conservation of mass (\ref{eq.mass}) at equilibrium yields the cross-channel velocity scale $U = \frac{g'D}{fL}$. The non-dimensional variables are thus scaled by
+\begin{gather}
+x = x^* / L_{D}, \quad y = y^* / L, \quad t = t^* / T\\
+v = v^* / V, \quad u = u^* / U, \quad d = d^* / D, \quad h^* / D
+\end{gather}
+Substituting into the shallow water equations yields
+\begin{gather}
+    \delta^2 \left( \pdv{u}{t} + u\pdv{u}{x} + v\pdv{u}{y} \right) -v = - \pdv{d}{x} - \pdv{h}{x} + \delta F^{(x)} \label{eq.non-dim-x-mom}\\
+    \pdv{v}{t} + u \pdv{v}{x} + v \pdv{v}{y} + u = - \pdv{d}{y} - \pdv{h}{y} + F^{(y)}\label{eq.non-dim-y-mom} \\
+    \pdv{d}{t} + \pdv{(u d)}{x} + \pdv{(v d)}{y} = 0,
+\end{gather}
+where $\delta = L_{D}/L$ and we scale the dissipation $\mathbf{F} = \frac{L \mathbf{F}^*}{g' D}$ such that it enters the cross-channel momentum balance only at first order in $\delta$. The limit $\delta \ll 1$ yields the semi-geostrophic equations in which the cross-channel (x-) momentum reduces to the familiar geostrophic balance at leading order, where the along-channel velocity is balanced by the cross-channel pressure gradient
+\begin{equation}
+    v = \dv{(d + h)}{x}.
+\end{equation}
+Notably, the (weaker) along-channel pressure gradient $\dv{(d + h)}{y}$ in (\ref{eq.non-dim-y-mom}) still accelerates the along-channel flow (on length scales longer than the width scale) and permits hydraulic behavior similar to the classical non-rotating case.
+\subsection{Idealized zero-PV solutions for parabolic channels}
+In the case of a parabolic channel cross-section $h(x,y)=h(0,y) + \alpha_{s}\, x^{2}$, \cite{Borenas1986} and \cite{borenas_deep-water_1988} derive an analytical solution for the critical condition in cases of constant or zero upstream potential vorticity. We begin by re-deriving their zero-potential vorticity solution (following the notation conventions of \citealt{Pratt2007}, Ch. 2.8) as a special case of quadratic cross-channel layer thickness and later use numerical methods to generalize these conditions to non-zero PV.
+
+Consider a quadratic thickness profile across the channel,
+\begin{equation}\label{eq.thickness}
+d(x) = \alpha x^{2} + \beta x + \gamma,
+\end{equation}
+with a corresponding semi-geostrophic velocity profile
+\begin{equation}\label{eq.velocity}
+v(x) = \dv{(d+h)}{x} = 2\left( \alpha + \alpha_{s} \right) x + \beta.
+\end{equation}
+
+The semi-geostrophic potential vorticity 
+\begin{equation}
+q = \frac{1+\frac{\partial v}{\partial x}}{d} = \frac{1+2(\alpha + \alpha_{s})}{\alpha x^{2} + \beta x + \gamma}
+\end{equation}
+vanishes, $q=0$, when 
+\begin{align}
+\alpha &= - \left(\alpha_{s} + \frac{1}{2} \right) \equiv \alpha_{\text{ZPV}}.
+\end{align}
+
+We define $x_{L}$ and $x_{R}$ to be the left and right points at which the layer depth vanishes, respectively. Expressing the layer thickness in terms of its roots, $d(x) = \alpha (x-x_{L})(x-x_{R})$, we identify the quadratic coefficients
+\begin{align}
+\beta &= -\alpha(x_{R}+x_{L}), \\
+\gamma &= \alpha\, x_{R}x_{L}.
+\end{align}
+
+\subsection{The hydraulic control condition with zero PV}
+
+The along-channel transport 
+\begin{equation}\label{eq.transport}
+Q = \int_{x_{L}}^{x_{R}} d(x)\, v(x)\; \text{d}x
+\end{equation}
+and the Bernoulli function
+\begin{equation}\label{eq.bernoulli}
+B = \frac{v^{2}}{2} + (d + h)
+\end{equation}
+are conserved in the inviscid limit. Combining (\ref{eq.transport}) and (\ref{eq.bernoulli}) with (\ref{eq.thickness}) and (\ref{eq.velocity}), we have
+\begin{equation}
+    Q = \mathcal{G}(w) = \frac{w^{3} (2+\alpha_{s}^{-1})}{6\alpha_{s}^{-2}} \left[ (B - h(0, y)) \frac{  \alpha_{s}^{-2}}{2+\alpha_{s}^{-1}} - \frac{w^{2}}{8\alpha_{s}} \right]^{1/2}\label{eq:quartic-width},
+\end{equation}
+where $w \equiv (x_{R} - x_{L})$ is the layer width. For a constant $Q>0$, (\ref{eq:quartic-width}) can be written as a quartic equation in $w^{2}$; its two physical roots yield subcritical and supercritical branches, respectively. Figure \ref{} shows one such solution.
+
+The expression (\ref{eq:quartic-width}) for the along-channel transport takes the form of a hydraulic functional in the dependent variable $w$ which depends on the along-channel position $y$ only implicitly \citep{gill_hydraulics_1977}. The partial derivative $\partial \mathcal{G}/\partial w = 0$ vanishes only at the critical section that permits stationary perturbations (equivalently, where the Froude number reaches unity). The assumption of stationarity yields a set of hydraulically-controlled solutions that satisfy the constraint
+\begin{equation}\label{eq.hydraulic_constraint}
+x_{R}-x_{L} = \sqrt{\frac{6}{r}}\left( x_{R} + x_{L} \right).
+\end{equation}
+Plugging this constraint (\ref{eq.hydraulic_constraint}) on the interface geometry into the expressions for the cross-channel thickness parameters $\beta$ and $\gamma$ yields the relationship
+\begin{equation}\label{eq.gamma}
+\gamma = K \beta^{2},\quad\text{where}\; K = \alpha_{s}^{-1} c\,(1 + c)^{-2} \;\text{ with }\;c = \frac{1+\sqrt{6\alpha_{s}}}{1-\sqrt{6\alpha_{s}}}
+\end{equation}
+Thus, for ZPV flows characterized by $\alpha = \alpha_{\text{ZPV}}$, the flow is critical only if $\gamma$ and $\beta$ satisfy (\ref{eq.gamma}). Examples of ZPV critical, supercritical, and subcritical quadratic-thickness sections with identical transports $Q$ are shown in Figure \ref{fig:zpv-regimes}.
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.65\textwidth]{figures/}
+% \caption{ZPV regime diagram.}\label{fig:zpv-regimes}
+% \end{figure}
 
 \section{Stationary perturbation hydraulic control theory}
 
-\subsection{Exact solutions in limits of zero PV, no rotation, or flat bottom}
+Since perturbations are by definition stationary at the critical section, perturbed solutions at the sill are determined by the same upstream conditions as the unperturbed basic state. In particular, the conserved quantities $B(\psi) = \frac{1}{2}v(\psi)^{2} + z(\psi)$ and $Q(\psi) = v(\psi)d(\psi)\Delta x(\psi)$ (between two streamlines separated by a distance $\Delta x$) are unaffected by the perturbation. Consider perturbations in $x'(\psi)$ which have corresponding perturbations in velocity $v'(\psi)$ and interface height $z'(\psi) = d'(\psi) + h'(\psi) = d'(\psi) + x'(\psi)s$, where $h'(\psi)=x'(\psi)\dv{h}{x}$ is the change in bottom elevation due to the shift in position of the streamline. For convenience, we define the cross-channel topographic slope $s=\dv{h}{x}$. By equating the conserved properties between the basic state and the perturbed state and linearizing, we have:
+\begin{align}
+& v'(\psi)v(\psi) + z'(\psi) = 0 & \text{(Linearized Bernoulli)} \label{eq1} \\
+& dv \Delta x' + (v'd+ vd') \Delta x = 0 & \text{(Linearized Volume Flux)} \label{eq2} 
+\end{align}
+The linearized geostrophic relation can be simplified to:
+\begin{align}
+& \frac{d'}{d^{2}} = - \dv{z'}{\psi} & \text{(Linearized geostrophy)} \label{eq3} 
+\end{align}
+Finally, we note that the boundary conditions are given by evaluating $z' = d' + x's$ at the edges where $d'(0)=d'(Q)=0$.
+
+\begin{gather}
+    \text{ADD DERIVATION OF RICARDI EQUATION IN TERMS OF STREAMFUNCTION}
+\end{gather}
+
+Since $x$ is a more natural independent variable than $\psi$, we transform these relations by noting that $\text{d}x = \frac{\text{d}\psi}{vd}$. Then, by combining equations (\ref{eq1}), (\ref{eq2}), and (\ref{eq3}), and again noting that $z'=d'+sx'$, we derive the following system of two coupled homogeneous linear ordinary different equations:
+\begin{align}
+& \dv{x'}{x} = \frac{s}{d}x' + \frac{1}{d} \left( \frac{d}{v^{2}} - 1 \right) z' \\
+& \dv{z'}{x} = \frac{s v}{d} x' - \frac{v}{d}z'.
+\end{align}
+
+These equations are ill-defined at $x=x_{L}$ and $x=x_{R}$ where $d=0$, but we can evaluate them in the limit as $d\rightarrow 0$ using l'Hospital's rule and get:
+\begin{align}
+& \dv{x'}{x} = \frac{1}{2} \left[ \dv{(d)}{x} \right]^{-1} \left( \frac{s^{2}}{v^{2}} + \dv{s}{x} \right) x' + \frac{1}{v^{2}}z'\label{finitediff1} \\
+& \dv{z'}{x} = \frac{v}{2} \left[ \dv{(d)}{x} \right]^{-1} \left( \frac{s^{2}}{v^{2}} + \dv{s}{x} \right) x'\label{finitediff2}
+\end{align}
+
+
+\subsection{Exact solutions in limits of a flat bottom, no rotation, or zero potential vorticity}
+
+\subsubsection{Flat bottom}
 
 See Larry's notes.
+
+\subsubsection{Arbitrary topography but no rotation}
+
+See Larry's notes.
+
+\subsubsection{Zero-PV channel}
+
+See Larry's notes. Borenas and Lundberg
 
 \subsection{Asymptotic integral solution in limit of weak rotation}
 
 See Larry's notes.
 
-\subsection{Numerical solution of general case}
+\subsection{Numerical solutions}
 
-See Henri's notes.
+\subsubsection{Shooting method}
+We use the shooting method to search for solutions to the perturbation equations. The essence of the shooting method is to solve a boundary value problem by reducing it to an initial value problem and numerically stepping forward from the initial conditions. We use the first-order finite differences scheme:
+\begin{align}
+& x'(x+\text{d}x) = x'(x) + \text{d}x \left[ \frac{s}{d}x' + \frac{1}{d} \left( \frac{d}{v^{2}} - 1 \right) z' \right] \\
+& z'(x+\text{d}x) = z'(x) + \text{d}x \left[ \frac{s v}{d} x' - \frac{v}{d}z' \right],
+\end{align}
+except at $x=x_{L}$ and $x=x_{R}$ where we instead discretize equation (\ref{finitediff1})-(\ref{finitediff2}). We take $d(x)$ and $v(x)$ as given by the upstream potential vorticity and geostrophy and take $s(x)$ as given by measurements of the bottom elevation at the critical section. Since the equations are homogeneous, we initially set $x'(x_{L})=1$ which gives $z'(x_{L})=s(x_{L})$. The problem reduces to finding a constant $C$ such the right boundary conditions $x'(x_{R}) = C$ and $z'(x_{R})=s(x_{R}) C$ satisfy the equations. We begin by simply guessing $C=1$ and then shoot across from $x=x_{L}$ and $x=x_{R}$ separately to the midpoint $x_{M}=(x_{L} + x_{R})/2$. We assert that the solutions from the left and right have to agree at $x=x_{M}$ and thus simply rescale $C = \frac{x^{\prime (L)}(x_{M})}{x^{\prime (R)}(x_{M})}$, the ratio of the value of the solution evaluated at $x=x_{M}$ shot from the left to its value as shot from the right. Then, we repeat the shooting method with the calculated value of $C$ and a solution to the equations exists if $z^{\prime (L)}(x_{M}) = z^{\prime (R)}(x_{M})$. If such a solution to the equations exists, then prescribed flow is critical with respect to the wave perturbations given by $x^{\prime}$ and $z^{\prime}$; if no solution exists, then the prescribed flow is either subcritical or supercritical.
+
+Figure \ref{shooting_method}a,b,c shows an application of the shooting method for a case with critical $a=a_{c}$ where $z^{\prime (L)}(x_{M}) = z^{\prime (R)}(x_{M})$ and Figure \ref{shooting_method}d,e,f shows an example with a slightly noncritical $a=1.01 a_{c}$ where $z^{\prime (L)}(x_{M}) \neq z^{\prime (R)}(x_{M})$ (red solid and dashed lines do not match at $x=x_{M}$ in Figure \ref{shooting_method}f).
+
+\subsubsection{Generalized transport relation}
+
+\subsubsection{Frontal vorticity modes}
 
 \section{Application of theory to nonlinear flow solutions}
 
-TBD
+\subsection{Identifying the critical section from (simulated) hydrographic sections}
+
+\subsection{A generalized weir formula for estimating transport from moorings}
+
+
 
 \section{Discussion}
 
 \section{Conclusions}
+
+\section{Appendix}
+
+\subsection{Nonlinear shallow water model}
 
 \bibliographystyle{jfm}
 % Note the spaces between the initials
