@@ -7,7 +7,7 @@ Sync with overleaf by adding it as a remote: `git remote add overleaf https://gi
 
 Update overleaf with new updates:
 ```bash
-git pull overleaf main
+git pull overleaf master
 git push overleaf
 ```
 

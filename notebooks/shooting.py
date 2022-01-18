@@ -16,8 +16,8 @@ def shoot_perturbations(α, β, γ, r, nx):
     if ((xR-xL) <= 0.) or np.isnan(xR-xL): return
 
     # Adapt grid spacing to width of domain!
-    dx = (xR-xL)/nx
-    x = np.arange(xL,xR+dx,dx)
+    dx = (xR-xL)/(nx-1)
+    x = np.arange(xL,xR+dx/2.,dx)
 
     d = calc_d(x, α, β, γ)
     d_x = calc_d_x(x, α, β)
